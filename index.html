@@ -426,6 +426,45 @@
                     <use href="./img/icons.svg#close"></use>
                 </svg>
             </button>
+            <form action="" class="form">
+                <h4 class="form-title">Оставьте свои данные, мы вам перезвоним</h4>
+                <div class="forms-field">
+                    <label for="name" class="forms-label">Имя</label>
+                    <input type="text" class="forms-input" name="user-name" id="name" />
+                    <svg class="form-svg" width="18" height="18">
+                        <use href="img/icons.svg#person"></use>
+                    </svg>
+                </div>
+                <div class="forms-field">
+                    <label for="phone" class="forms-label">Телефон</label>
+                    <input type="text" class="forms-input" name="phone-name" id="phone" />
+                    <svg class="form-svg" width="18" height="18">
+                        <use href="img/icons.svg#phone"></use>
+                    </svg>
+                </div>
+                <div class="forms-field">
+                    <label for="email" class="forms-label">Почта</label>
+                    <input type="text" class="forms-input" name="email-name" id="email" />
+                    <svg class="form-svg" width="18" height="18">
+                        <use href="img/icons.svg#email"></use>
+                    </svg>
+                </div>
+                <div class="forms-field">
+                    <label for="comment" class="forms-label">Комментарий</label>
+                    <textarea 
+                        class="forms-textarea" 
+                        name="comment-name" 
+                        id="comment" 
+                        rows="10" 
+                        placeholder="Введите текст">
+                    </textarea>
+                </div>
+                    
+                <input type="checkbox" name="checkbox-name" id="checkbox">
+                <label for="checkbox" >Соглашаюсь с рассылкой и принимаю Условия договора</label>
+
+                <button type="submit" class="button-service form-button">Отправить</button>
+            </form>
         </div>
     </div>
     <script src="./js/modal.js"></script>

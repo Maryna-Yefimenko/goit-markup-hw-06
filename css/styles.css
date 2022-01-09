@@ -555,7 +555,7 @@ a {
 
   width: 528px;
   height: 581px;
-  padding: 15px;
+  padding: 40px;
 
   background-color: var(--second-accent-color);
   border-radius: 4px;
@@ -580,7 +580,7 @@ a {
   width: 30px;
   height: 30px;
   
-  color: var(--black-text-color); 
+  fill: currentColor;
   background-color: var(--primary-background-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 15px;
@@ -588,19 +588,108 @@ a {
   cursor: pointer;
 }
 
-.close-icon {
-  fill: currentColor;
+.close-modal:hover, 
+.close-modal:focus {
+color: var(--accent-color)
 }
-.text-modal {
-  padding-top: 20px;
-  padding-bottom: 12px;
-  padding-right: 20px;
-  padding-left: 20px;
 
-  font-weight: bold;
+/* Оформление модального окна */
+.form {
+  margin: 0;
+}
+.form-title{
+  margin-top: 0;
+  margin-bottom: 12px;
+  
+  font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.17;
   text-align: center;
+
+  color: var(--primary-text-color);
+}
+
+.forms-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  
+  margin-bottom: 10px;
+  padding: 0;
+}
+.forms-label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4px;
+
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: var(--secondary-text-color);
+}
+.forms-input {
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.forms-textarea {
+  width: 448px;
+  height: 120px;
+
+  margin-bottom: 20px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  resize: none;
+}
+.forms-input:hover,
+.forms-input:focus,
+.forms-textarea:hover,
+.forms-textarea:focus {
+  border: 1px solid var(--blue-background-color);
+}
+
+.form-svg {
+  position: absolute;
+  top: 37px;
+  left: 12px;
+
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+
+  fill: currentColor;
+  
+  transform: translateY(-50%);
+}
+
+.forms-input:hover + .form-svg,
+.forms-input:focus + .form-svg {
+  color: var(--accent-color);
+}
+
+.form-button {
+  display: block;
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 56px;
+  padding-left: 55px;
+  
+  color: var(--second-accent-color);
+  border: 0;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  cursor: pointer;
 }
 
 /* Стили для portfolio.html */
