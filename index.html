@@ -456,12 +456,22 @@
                         name="comment-name" 
                         id="comment" 
                         rows="10" 
-                        placeholder="Введите текст">
-                    </textarea>
+                        placeholder="Введите текст" ></textarea>
                 </div>
-                    
-                <input type="checkbox" name="checkbox-name" id="checkbox">
-                <label for="checkbox" >Соглашаюсь с рассылкой и принимаю Условия договора</label>
+
+
+                <label class="checkbox-label">    
+                <input 
+                    class="checkbox" 
+                    type="checkbox" 
+                    name="checkbox" 
+                    value="checkbox" />
+                <span class="checkbox-icon">
+                    <svg width='16' height='15'>
+                        <use href="./img/icon-check.svg"></use>
+                    </svg>
+                </span>
+                Соглашаюсь с рассылкой и принимаю Условия договора</label>
 
                 <button type="submit" class="button-service form-button">Отправить</button>
             </form>

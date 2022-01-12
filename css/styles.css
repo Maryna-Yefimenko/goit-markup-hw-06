@@ -553,8 +553,8 @@ a {
   top: 50%;
   left: 50%;
 
-  width: 528px;
-  height: 581px;
+  min-width: 528px;
+  min-height: 581px;
   padding: 40px;
 
   background-color: var(--second-accent-color);
@@ -598,6 +598,7 @@ color: var(--accent-color)
   margin: 0;
 }
 .form-title{
+  display: inline-block;
   margin-top: 0;
   margin-bottom: 12px;
   
@@ -617,42 +618,61 @@ color: var(--accent-color)
   margin-bottom: 10px;
   padding: 0;
 }
+
+/* Как переопределить нижний марджин для forms-field forms-textarea???
+.forms-field:last-child {
+  margin-bottom: 20px;
+} */
+
 .forms-label {
   display: flex;
   flex-direction: column;
   margin-bottom: 4px;
 
-  font-size: 12px;
   font-weight: 400;
+  font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
   text-align: left;
   color: var(--secondary-text-color);
 }
 .forms-input {
+  display: block;
   height: 40px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 42px;
+
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
+
+  cursor: pointer;
 }
 
 .forms-textarea {
+  display: block;
   width: 448px;
   height: 120px;
+  padding: 12px 16px;
 
-  margin-bottom: 20px;
   border: 1px solid rgba(33, 33, 33, 0.2);
-  box-sizing: border-box;
   border-radius: 4px;
+  box-sizing: border-box;
 
+  cursor: pointer;
   resize: none;
 }
-.forms-input:hover,
-.forms-input:focus,
-.forms-textarea:hover,
-.forms-textarea:focus {
-  border: 1px solid var(--blue-background-color);
+
+.forms-textarea::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
 }
+
+
 
 .form-svg {
   position: absolute;
@@ -668,10 +688,66 @@ color: var(--accent-color)
   transform: translateY(-50%);
 }
 
+/* .forms-input:focus-within {
+  color: var(--accent-color);
+  }
+.forms-input:focus-within {
+  border: 1px solid var(--accent-color);
+  }
+ */
+
 .forms-input:hover + .form-svg,
 .forms-input:focus + .form-svg {
   color: var(--accent-color);
 }
+
+.forms-input:hover,
+.forms-input:focus,
+.forms-textarea:hover,
+.forms-textarea:focus {
+  border: 1px solid var(--accent-color);
+}
+.forms-input:focus,
+.forms-textarea:focus {
+  border: 0;
+  outline-color: var(--accent-color);
+}
+
+/* Рабочий вариант
+.forms-field:focus-within > .form-svg {
+  color: #2196f3;
+} */
+
+/* Checkbox */
+.checkbox-label {
+  display: flex;
+  align-items: center;
+}
+.checkbox {
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  appearance:none;
+
+  position: absolute;
+}
+.checkbox-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 9px;
+  margin-left: 15px;
+
+  border: 2px solid var(--primary-text-color);
+  border-radius: 2px;
+}
+.checkbox:checked + .checkbox-icon {
+  border-color: transparent;
+  background-color: var(--blue-background-color);
+  background-image: url('../img/icon-check.svg');
+  background-size: contain; 
+  background-origin: border-box;
+}
+
 
 .form-button {
   display: block;
