@@ -58,9 +58,20 @@ a {
   margin: 0;
   background-color: var(--primery-background-color);
 }
-.hidden-title {
+/* .hidden-title {
   display: none;
-  }
+  } */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 
 /* top line */
 .logo {
@@ -619,10 +630,10 @@ color: var(--accent-color)
   padding: 0;
 }
 
-/* Как переопределить нижний марджин для forms-field forms-textarea???
-.forms-field:last-child {
+/* Как переопределить нижний марджин для forms-field forms-textarea */
+.forms-field:nth-child(5) {
   margin-bottom: 20px;
-} */
+}
 
 .forms-label {
   display: flex;
@@ -634,6 +645,7 @@ color: var(--accent-color)
   line-height: 1.16;
   letter-spacing: 0.01em;
   text-align: left;
+
   color: var(--secondary-text-color);
 }
 .forms-input {
@@ -644,8 +656,8 @@ color: var(--accent-color)
   padding-left: 42px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
-  box-sizing: border-box;
   border-radius: 4px;
+  box-sizing: border-box; 
 
   cursor: pointer;
 }
@@ -672,8 +684,6 @@ color: var(--accent-color)
   color: rgba(117, 117, 117, 0.5);
 }
 
-
-
 .form-svg {
   position: absolute;
   top: 37px;
@@ -687,14 +697,6 @@ color: var(--accent-color)
   
   transform: translateY(-50%);
 }
-
-/* .forms-input:focus-within {
-  color: var(--accent-color);
-  }
-.forms-input:focus-within {
-  border: 1px solid var(--accent-color);
-  }
- */
 
 .forms-input:hover + .form-svg,
 .forms-input:focus + .form-svg {
@@ -722,14 +724,28 @@ color: var(--accent-color)
 .checkbox-label {
   display: flex;
   align-items: center;
-}
-.checkbox {
-  -webkit-appearance:none;
-  -moz-appearance:none;
-  appearance:none;
+  margin-bottom: 30px;
 
-  position: absolute;
+  font-family: var(--primary-font);
+  font-weight: 400;
+  color: var(--secondary-text-color);
 }
+/*-webkit-appearance:none;
+-moz-appearance:none;
+appearance:none;
+position: absolute;*/
+
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .checkbox-icon {
   display: inline-block;
   width: 16px;
@@ -740,14 +756,32 @@ color: var(--accent-color)
   border: 2px solid var(--primary-text-color);
   border-radius: 2px;
 }
+
 .checkbox:checked + .checkbox-icon {
   border-color: transparent;
+  border-radius: 2px;
+  
   background-color: var(--blue-background-color);
   background-image: url('../img/icon-check.svg');
   background-size: contain; 
   background-origin: border-box;
 }
 
+.checkbox:hover + .checkbox-icon,
+.checkbox:focus + .checkbox-icon  {
+  border-color: var(--blue-background-color);
+  fill: var(--accent-color);
+}
+
+.terms-link {
+  margin-left: 4px;
+
+  font-family: var(--primary-font);
+  font-weight: 400;
+  text-decoration-line: underline;
+
+  color: var(--accent-color);
+}
 
 .form-button {
   display: block;
