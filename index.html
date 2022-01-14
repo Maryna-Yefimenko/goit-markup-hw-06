@@ -382,7 +382,7 @@
                 </address>
             </div>
             <div class="footer-socials-block">
-                <h2 class="footer-soc-title">присоединяйтесь</h2>
+                <h3 class="footer-soc-title">присоединяйтесь</h3>
                 <ul class="footer-list">
                     <li class="footer-item">
                     <a href="" class="footer-link">
@@ -417,6 +417,24 @@
                     </li>
                 </ul>
             </div>
+            <form class="footer-form">
+                <h3 class="footer-soc-title">Подпишитесь на рассылку</h3>
+                <div class="footer-field">
+                    <label class="footer-label">
+                        <input class="footer-input" 
+                            type="email" 
+                            name="email-subscribe"
+                            placeholder="E-mail"> 
+                    </label>
+
+                    <button type="submit" class="button-service subscribe-button">
+                        <span class="subscribe-text">Подписаться</span>
+                        <svg class="subscribe-icon" width="24" height="24" >
+                            <use href="./img/icons.svg#send"></use>
+                        </svg>
+                    </button>
+                </div>
+            </form>
         </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
@@ -459,14 +477,13 @@
                         placeholder="Введите текст" ></textarea>
                 </div>
 
-
                 <label class="checkbox-label">    
                 <input class="checkbox" 
                     type="checkbox" 
                     name="checkbox" 
                     value="checkbox"/>
                 <span class="checkbox-icon">
-                    <svg width='16' height='15'>
+                    <svg width="16" height="15">
                         <use href="./img/icon-check.svg"></use>
                     </svg>
                 </span>
